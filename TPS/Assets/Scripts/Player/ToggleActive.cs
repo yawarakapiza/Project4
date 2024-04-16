@@ -68,9 +68,16 @@ public class ToggleActive : MonoBehaviour
                 if (targetObjects.Length > 1 && targetObjects[0] != null && targetObjects[1] != null)
                 {
                     // Element 1 を非アクティブにし、Element 0 をアクティブにして初期位置に移動させる
-                    targetObjects[1].SetActive(false);
-                    targetObjects[0].SetActive(true);
-                    targetObjects[0].transform.position = objectPositions[x];
+                    Rigidbody rbElement1 = targetObjects[1].GetComponent<Rigidbody>(); // Element 1のRigidbodyコンポーネントを取得
+                    if (rbElement1 != null)
+                    {
+                        rbElement1.velocity = Vector3.zero; // 速度を0に設定
+                        rbElement1.angularVelocity = Vector3.zero; // 角速度を0に設定
+                    }
+
+                    targetObjects[1].SetActive(false); // Element 1を非アクティブにする
+                    targetObjects[0].SetActive(true); // Element 0をアクティブにする
+                    targetObjects[0].transform.position = objectPositions[x]; // 初期位置に移動させる
                 }
             }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5997731734636884316}
   - component: {fileID: 5997731734636884319}
   - component: {fileID: 5997731734636884318}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5997731734636884305}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 45d483aca3602e84092ee27c3ffda594, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -114,8 +114,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Constraints: 116
+  m_CollisionDetection: 1
 --- !u!114 &5997731734636884318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +137,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5997731734636884315}
     m_Modifications:
+    - target: {fileID: 2833950534777121356, guid: 67366e3b306280e43b72033e12dee4be, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2875783635029386628, guid: 67366e3b306280e43b72033e12dee4be, type: 3}
       propertyPath: m_AngularDrag
       value: 0.5
@@ -145,9 +149,17 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8418613941479350012, guid: 67366e3b306280e43b72033e12dee4be, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8418613941856902348, guid: 67366e3b306280e43b72033e12dee4be, type: 3}
       propertyPath: m_Name
       value: Gun0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418613941856902348, guid: 67366e3b306280e43b72033e12dee4be, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8418613941856902348, guid: 67366e3b306280e43b72033e12dee4be, type: 3}
       propertyPath: m_TagString
